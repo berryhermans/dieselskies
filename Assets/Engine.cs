@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Engine : MonoBehaviour {
 
-	public Transform BodyTrans;
+	public Rigidbody body;
 	[Range(0,100)]
 	public float Speed;
 
@@ -14,7 +14,7 @@ public class Engine : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		BodyTrans.Translate(Vector3.forward * Time.deltaTime * Speed);		
+	void FixedUpdate () {
+		body.velocity = Vector3.forward * Speed;
 	}
 }
