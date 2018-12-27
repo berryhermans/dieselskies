@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SteeringWheel : MonoBehaviour
 {
-
 	public Rigidbody Body;
 	public Transform Target;
-
-	private Quaternion _targetDirection;
+    [Range(0,360)]
+    public float TurnStrength;
 
 	// Use this for initialization
 	void Start()
@@ -16,13 +15,10 @@ public class SteeringWheel : MonoBehaviour
 
 	}
 
-	// Update is called once per frame
-	void FixedUpdate()
-	{
-		_targetDirection = Quaternion.Euler(Target.position - Body.position);
-
-		Debug.Log("mouse: " + _targetDirection);
-
-		Body.rotation = _targetDirection;
-	}
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        Quaternion _targetRotation = Quaternion.LookRotation(Target.position - Body.position);
+        Body.rotation = Quaternion.RotateTowards(Body.rotation, _targetRotation, TurnStrength * Time.deltaTime);
+    }
 }
