@@ -16,6 +16,20 @@ public class Sensor : MonoBehaviour {
 	public bool BroadcastOnStay;
 	public bool BroadcastOnExit;
 
+	public float DelayBetweenStayBroadcasts;
+
+	private float _timeUntilNextStayBroadcast;
+
+	private void Start()
+	{
+		_timeUntilNextStayBroadcast = 0;
+	}
+
+	private void Update()
+	{
+		if (DelayBetweenStayBroadcasts > 0) _timeUntilNextStayBroadcast -= Time.deltaTime;
+	}
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if (BroadcastOnEnter)
@@ -26,9 +40,10 @@ public class Sensor : MonoBehaviour {
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (BroadcastOnStay)
+		if (BroadcastOnStay && _timeUntilNextStayBroadcast <= 0)
 		{
 			Debug.Log("stay");
+			_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
 		}
 	}
 

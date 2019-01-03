@@ -444,9 +444,10 @@ MonoBehaviour:
   SensorCollider: {fileID: 932258714}
   DetectHostilePlanes: 0
   DetectFriendlyPlanes: 0
-  BroadcastOnEnter: 0
+  BroadcastOnEnter: 1
   BroadcastOnStay: 0
-  BroadcastOnExit: 0
+  BroadcastOnExit: 1
+  DelayBetweenStayBroadcasts: 0
 --- !u!1 &1181091657
 GameObject:
   m_ObjectHideFlags: 0
