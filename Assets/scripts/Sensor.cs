@@ -19,6 +19,7 @@ public class Sensor : MonoBehaviour {
 	public float DelayBetweenStayBroadcasts;
 
 	private float _timeUntilNextStayBroadcast;
+	private float _lastOnStayFrame;
 
 	private void Start()
 	{
@@ -34,16 +35,17 @@ public class Sensor : MonoBehaviour {
 	{
 		if (BroadcastOnEnter)
 		{
-			Debug.Log("enter"); 
+			Debug.Log("Entering sensor range: " + other.name);
 		}
 	}
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (BroadcastOnStay && _timeUntilNextStayBroadcast <= 0)
+		if (BroadcastOnStay && (_timeUntilNextStayBroadcast <= 0 || _lastOnStayFrame == Time.frameCount))
 		{
-			Debug.Log("stay");
+			Debug.Log("Staying in sensor range: " + other.name);
 			_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
+			_lastOnStayFrame = Time.frameCount;
 		}
 	}
 
@@ -51,7 +53,7 @@ public class Sensor : MonoBehaviour {
 	{
 		if (BroadcastOnExit)
 		{
-			Debug.Log("exit");
+			Debug.Log("Exiting sensor range: " + other.name);
 		}
 	}
 }
