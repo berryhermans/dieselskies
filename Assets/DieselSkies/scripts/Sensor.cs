@@ -9,8 +9,7 @@ public class Sensor : MonoBehaviour {
 
 	public Collider SensorCollider;
 
-	public bool DetectHostilePlanes;
-	public bool DetectFriendlyPlanes;
+	public bool DetectPlanes;
 
 	public bool BroadcastOnEnter;
 	public bool BroadcastOnStay;
@@ -41,6 +40,10 @@ public class Sensor : MonoBehaviour {
 
 	private void OnTriggerStay(Collider other)
 	{
+		if (UnityEditorInternal.InternalEditorUtility.tags[0] == "bla")
+		{
+		}
+
 		if (BroadcastOnStay && (_timeUntilNextStayBroadcast <= 0 || _lastOnStayFrame == Time.frameCount))
 		{
 			Debug.Log("Staying in sensor range: " + other.name);
