@@ -32,31 +32,28 @@ public class Sensor : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (BroadcastOnEnter)
-		{
-			Debug.Log("Entering sensor range: " + other.name);
-		}
+		if (!BroadcastOnEnter) return;
+		if (other.GetComponent<SensorTarget>() == null) return;
+
+		Debug.Log("Entering sensor range: " + other.name);
 	}
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (UnityEditorInternal.InternalEditorUtility.tags[0] == "bla")
-		{
-		}
+		if (!BroadcastOnStay) return;
+		if (_timeUntilNextStayBroadcast > 0 && _lastOnStayFrame != Time.frameCount) return;
+		if (other.GetComponent<SensorTarget>() == null) return; 
 
-		if (BroadcastOnStay && (_timeUntilNextStayBroadcast <= 0 || _lastOnStayFrame == Time.frameCount))
-		{
-			Debug.Log("Staying in sensor range: " + other.name);
-			_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
-			_lastOnStayFrame = Time.frameCount;
-		}
+		Debug.Log("Staying in sensor range: " + other.name);
+		_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
+		_lastOnStayFrame = Time.frameCount;
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		if (BroadcastOnExit)
-		{
-			Debug.Log("Exiting sensor range: " + other.name);
-		}
+		if (!BroadcastOnExit) return;
+		if (other.GetComponent<SensorTarget>() == null) return;
+
+		Debug.Log("Exiting sensor range: " + other.name);
 	}
 }
