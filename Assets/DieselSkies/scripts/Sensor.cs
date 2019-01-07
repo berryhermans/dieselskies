@@ -20,6 +20,9 @@ public class Sensor : MonoBehaviour {
 	private float _timeUntilNextStayBroadcast;
 	private float _lastOnStayFrame;
 
+	public delegate void DetectAction(SensorOutputModel detection);
+	public static event DetectAction OnDetect;
+
 	private void Start()
 	{
 		_timeUntilNextStayBroadcast = 0;
@@ -36,6 +39,8 @@ public class Sensor : MonoBehaviour {
 		if (other.GetComponent<SensorTarget>() == null) return;
 
 		Debug.Log("Entering sensor range: " + other.name);
+
+		OnDetect(new SensorOutputModel(other.gameObject));
 	}
 
 	private void OnTriggerStay(Collider other)
@@ -47,6 +52,8 @@ public class Sensor : MonoBehaviour {
 		Debug.Log("Staying in sensor range: " + other.name);
 		_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
 		_lastOnStayFrame = Time.frameCount;
+
+		OnDetect(new SensorOutputModel(other.gameObject));
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -55,5 +62,7 @@ public class Sensor : MonoBehaviour {
 		if (other.GetComponent<SensorTarget>() == null) return;
 
 		Debug.Log("Exiting sensor range: " + other.name);
+
+		OnDetect(new SensorOutputModel(other.gameObject));
 	}
 }
