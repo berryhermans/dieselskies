@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A Sensor's only job is to detect specific objects and announcing that these objects are entering, staying or leaving the sensor range
 /// </summary>
-public class Sensor : MonoBehaviour {
+public class Sensor : MonoBehaviour, IVector3Broadcaster {
 
 	public Collider SensorCollider;
 
@@ -20,8 +20,7 @@ public class Sensor : MonoBehaviour {
 	private float _timeUntilNextStayBroadcast;
 	private float _lastOnStayFrame;
 
-	public delegate void DetectAction(SensorOutputModel detection);
-	public static event DetectAction OnDetect;
+	public event BroadcastAction OnVector3Broadcast;
 
 	private void Start()
 	{
@@ -40,7 +39,7 @@ public class Sensor : MonoBehaviour {
 
 		Debug.Log("Entering sensor range: " + other.name);
 
-		OnDetect(new SensorOutputModel(other.gameObject));
+		OnVector3Broadcast(other.transform.position);
 	}
 
 	private void OnTriggerStay(Collider other)
@@ -53,7 +52,7 @@ public class Sensor : MonoBehaviour {
 		_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
 		_lastOnStayFrame = Time.frameCount;
 
-		OnDetect(new SensorOutputModel(other.gameObject));
+		OnVector3Broadcast(other.transform.position);
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -63,6 +62,6 @@ public class Sensor : MonoBehaviour {
 
 		Debug.Log("Exiting sensor range: " + other.name);
 
-		OnDetect(new SensorOutputModel(other.gameObject));
+		OnVector3Broadcast(other.transform.position);
 	}
 }
