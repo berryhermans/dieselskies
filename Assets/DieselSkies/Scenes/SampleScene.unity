@@ -401,8 +401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Body: {fileID: 932258713}
-  Target: {fileID: 1258212650}
   TurnStrength: 45
+  Input: {fileID: 932258715}
 --- !u!54 &932258713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SensorCollider: {fileID: 932258714}
   DetectPlanes: 0
-  BroadcastOnEnter: 0
+  BroadcastOnEnter: 1
   BroadcastOnStay: 1
   BroadcastOnExit: 0
   DelayBetweenStayBroadcasts: 1

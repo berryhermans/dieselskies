@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class SteeringWheel : MonoBehaviour
@@ -9,12 +8,13 @@ public class SteeringWheel : MonoBehaviour
     [Range(0,360)]
     public float TurnStrength;
 
-	public IVector3Broadcaster Input;
+	public InputBroadcaster Input;
 	private Vector3 _target;
 
 	// Use this for initialization
 	void Start()
 	{
+		_target = Body.transform.forward.normalized;
 		Input.OnVector3Broadcast += OnInputHandler;
 	}
 
@@ -28,16 +28,5 @@ public class SteeringWheel : MonoBehaviour
 	private void OnInputHandler(Vector3 input)
 	{
 		_target = input;
-	}
-}
-
-[CustomEditor (typeof(SteeringWheel))] 
-public class SteeringWheelEditor : Editor
-{
-	public override void OnInspectorGUI ()
-	{
-		SteeringWheel script = (SteeringWheel)target;
-		script.Input = (IVector3Broadcaster) EditorGUILayout.ObjectField("Input", script.Input, typeof(IVector3Broadcaster), true);
-		DrawDefaultInspector();
 	}
 }
