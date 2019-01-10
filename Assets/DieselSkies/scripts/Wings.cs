@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SteeringWheel : MonoBehaviour
+public class Wings : MonoBehaviour
 {
 	public Rigidbody Body;
     [Range(0,360)]
