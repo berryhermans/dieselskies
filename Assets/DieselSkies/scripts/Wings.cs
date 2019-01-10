@@ -17,6 +17,7 @@ public class Wings : MonoBehaviour
 	void Start()
 	{
 		Input.OnVector3Broadcast += OnInputHandler;
+		SetState(WingState.IDLE);
 	}
 
     // Update is called once per frame
@@ -28,10 +29,10 @@ public class Wings : MonoBehaviour
 	private void OnInputHandler(Vector3 input)
 	{
 		_target = input;
-		if (_currentState != WingState.TURNING) SwitchState(WingState.TURNING);
+		if (_currentState != WingState.TURNING) SetState(WingState.TURNING);
 	}
 
-	private void SwitchState(WingState newState)
+	private void SetState(WingState newState)
 	{
 		_previousState = _currentState;
 		_currentState = newState;
@@ -42,7 +43,7 @@ public class Wings : MonoBehaviour
 		switch (_currentState)
 		{
 			case WingState.IDLE:
-				HandleIdleState();
+				// The plane is on target, so the wings don't have to do anything.
 				break;
 			case WingState.TURNING:
 				HandleTurningState();
@@ -57,12 +58,11 @@ public class Wings : MonoBehaviour
 	{
 		Quaternion _targetRotation = Quaternion.LookRotation(_target - Body.position);
 		Body.rotation = Quaternion.RotateTowards(Body.rotation, _targetRotation, TurnStrength * Time.deltaTime);
+
+		// Are we on target yet?
+		if (Body.rotation == _targetRotation) SetState(WingState.IDLE);
 	}
 
-	private void HandleIdleState()
-	{
-
-	}
 }
 
 public enum WingState
