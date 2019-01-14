@@ -62,7 +62,6 @@ public class Wings : MonoBehaviour
 		// Are we on target yet?
 		if (Body.rotation == _targetRotation) SetState(WingState.IDLE);
 	}
-
 }
 
 public enum WingState
