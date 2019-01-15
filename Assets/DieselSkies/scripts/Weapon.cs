@@ -7,14 +7,55 @@ public class Weapon : MonoBehaviour {
 	public InputBroadcaster Input;
 	public GameObject AttackSpawnpoint;
 
+	private WeaponState _currentState;
+	private WeaponState _previousState;
+
 	private void Start()
 	{
-		Input.OnVector3Broadcast += Shoot;
+		Input.OnGameObjectBroadcast += OnInputHandler;
 	}
 
-	public void Shoot(Vector3 target)
+	private void FixedUpdate()
 	{
-		Debug.DrawLine(AttackSpawnpoint.transform.position, target, Color.yellow, .1f);
+		HandleState();
+	}
+
+	private void HandleState()
+	{
+		switch (_currentState)
+		{
+			case WeaponState.IDLE:
+
+				break;
+			case WeaponState.SHOOTING:
+				HandleShootingState();
+				break;
+			default:
+				break;
+		}
+	}
+
+	private void HandleShootingState()
+	{
+		//Debug.DrawLine(AttackSpawnpoint.transform.position, target, Color.yellow, .1f);
 		Debug.Log("pewpewpew");
 	}
+
+	private void SetState(WeaponState newState)
+	{
+		_previousState = _currentState;
+		_currentState = newState;
+	}
+
+	private void OnInputHandler(GameObject go)
+	{
+
+	}
+
+}
+
+public enum WeaponState
+{
+	IDLE,
+	SHOOTING
 }
