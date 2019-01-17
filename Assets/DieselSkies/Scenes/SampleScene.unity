@@ -158,6 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Input: {fileID: 150229462}
   AttackSpawnpoint: {fileID: 679951244}
+  ProjectilePrefab: {fileID: 1613611209568868, guid: b9a2adcedc5a7174cbd068091bb745e0,
+    type: 2}
 --- !u!114 &150229462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SensorCollider: {fileID: 2105375339}
-  DetectPlanes: 0
+  BroadcastVector3: 0
+  BroadcastGameObject: 1
   BroadcastOnEnter: 1
   BroadcastOnStay: 1
   BroadcastOnExit: 1
@@ -547,7 +550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SensorCollider: {fileID: 932258714}
-  DetectPlanes: 0
+  BroadcastVector3: 0
+  BroadcastGameObject: 0
   BroadcastOnEnter: 1
   BroadcastOnStay: 1
   BroadcastOnExit: 0
@@ -999,7 +1003,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1912007413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.16, y: 0.67, z: -2.39}
+  m_LocalPosition: {x: -34.16, y: 0.67, z: -6.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

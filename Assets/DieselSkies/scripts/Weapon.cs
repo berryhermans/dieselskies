@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour {
 
 	public InputBroadcaster Input;
 	public GameObject AttackSpawnpoint;
+	public GameObject ProjectilePrefab;
 
 	private WeaponState _currentState;
 	private WeaponState _previousState;
@@ -37,8 +38,7 @@ public class Weapon : MonoBehaviour {
 
 	private void HandleShootingState()
 	{
-		//Debug.DrawLine(AttackSpawnpoint.transform.position, target, Color.yellow, .1f);
-		Debug.Log("pewpewpew");
+		Instantiate(ProjectilePrefab, AttackSpawnpoint.transform.position, AttackSpawnpoint.transform.rotation);
 	}
 
 	private void SetState(WeaponState newState)
@@ -49,7 +49,8 @@ public class Weapon : MonoBehaviour {
 
 	private void OnInputHandler(GameObject go)
 	{
-
+		// TODO: gotta keep track of all the objects within range and toggle fire modes based on that list
+		SetState(WeaponState.SHOOTING);
 	}
 
 }
