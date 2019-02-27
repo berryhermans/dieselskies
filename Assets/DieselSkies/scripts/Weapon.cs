@@ -9,8 +9,11 @@ public class Weapon : MonoBehaviour {
 	public GameObject ProjectilePrefab;
     [Range(0, 5)]
     public float TimeBetweenShots;
+    [Range(0, 5)]
+    public float TimeBetweenLastInputAndLastShot;
 
     private float _timeSinceLastShot;
+    private float _timeSinceLastInput;
     private bool _isShooting;
 
 	private void Start()
@@ -21,10 +24,16 @@ public class Weapon : MonoBehaviour {
 	private void FixedUpdate()
 	{
         _timeSinceLastShot += Time.deltaTime;
+        _timeSinceLastInput += Time.deltaTime;
 
         if (_isShooting && _timeSinceLastShot >= TimeBetweenShots)
         {
             Shoot();
+        }
+
+        if (_timeSinceLastInput >= TimeBetweenLastInputAndLastShot)
+        {
+            _isShooting = false;
         }
 	}
 
@@ -32,6 +41,7 @@ public class Weapon : MonoBehaviour {
 	{
         // TODO: gotta keep track of all the objects within range and toggle fire modes based on that list
         _isShooting = true;
+        _timeSinceLastInput = 0;
 	}
 
     private void Shoot()

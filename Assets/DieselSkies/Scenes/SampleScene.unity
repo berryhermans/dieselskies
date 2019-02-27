@@ -162,6 +162,8 @@ MonoBehaviour:
   AttackSpawnpoint: {fileID: 679951244}
   ProjectilePrefab: {fileID: 1613611209568868, guid: b9a2adcedc5a7174cbd068091bb745e0,
     type: 3}
+  TimeBetweenShots: 0.5
+  TimeBetweenLastInputAndLastShot: 0.5
 --- !u!114 &150229462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +182,7 @@ MonoBehaviour:
   BroadcastOnEnter: 1
   BroadcastOnStay: 1
   BroadcastOnExit: 1
-  DelayBetweenStayBroadcasts: 0
+  DelayBetweenStayBroadcasts: 0.25
 --- !u!54 &150229463
 Rigidbody:
   m_ObjectHideFlags: 0

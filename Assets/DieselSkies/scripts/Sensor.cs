@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// A Sensor's only job is to detect specific objects and announcing that these objects are entering, staying or leaving the sensor range
+/// A Sensor's only job is to detect specific objects and announcing if these objects are entering, staying or leaving the sensor range
 /// </summary>
 public class Sensor : InputBroadcaster {
 
@@ -18,6 +18,7 @@ public class Sensor : InputBroadcaster {
 	public bool BroadcastOnStay;
 	public bool BroadcastOnExit;
 
+    [Header("Other Settings")]
 	public float DelayBetweenStayBroadcasts;
 
 	private float _timeUntilNextStayBroadcast;
