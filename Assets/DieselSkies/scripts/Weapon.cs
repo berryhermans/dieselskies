@@ -7,9 +7,13 @@ public class Weapon : MonoBehaviour {
 	public InputBroadcaster Input;
 	public GameObject AttackSpawnpoint;
 	public GameObject ProjectilePrefab;
+    [Range(0, 5)]
+    public float TimeBetweenShots;
 
 	private WeaponState _currentState;
 	private WeaponState _previousState;
+
+    private float _timeSinceLastShot;
 
 	private void Start()
 	{
@@ -18,6 +22,8 @@ public class Weapon : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
+        _timeSinceLastShot += Time.deltaTime;
+
 		HandleState();
 	}
 
@@ -26,7 +32,6 @@ public class Weapon : MonoBehaviour {
 		switch (_currentState)
 		{
 			case WeaponState.IDLE:
-
 				break;
 			case WeaponState.SHOOTING:
 				HandleShootingState();
@@ -38,7 +43,10 @@ public class Weapon : MonoBehaviour {
 
 	private void HandleShootingState()
 	{
-		Instantiate(ProjectilePrefab, AttackSpawnpoint.transform.position, AttackSpawnpoint.transform.rotation);
+        if (_timeSinceLastShot >= TimeBetweenShots)
+        {
+            Shoot();
+        }
 	}
 
 	private void SetState(WeaponState newState)
@@ -53,6 +61,11 @@ public class Weapon : MonoBehaviour {
 		SetState(WeaponState.SHOOTING);
 	}
 
+    private void Shoot()
+    {
+        Instantiate(ProjectilePrefab, AttackSpawnpoint.transform.position, AttackSpawnpoint.transform.rotation);
+        _timeSinceLastShot = 0;
+    }
 }
 
 public enum WeaponState
