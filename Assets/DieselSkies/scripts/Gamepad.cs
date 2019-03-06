@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,9 +17,13 @@ public class Gamepad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Joystick1Button0))
+        if (Input.anyKeyDown)
         {
-            Debug.Log("beepboop");
+            foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+            {
+                if (Input.GetKeyDown(kcode))
+                    Debug.Log("KeyCode down: " + kcode);
+            }
         }
     }
 }
