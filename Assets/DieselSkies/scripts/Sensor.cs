@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// A Sensor's only job is to detect specific objects and announcing that these objects are entering, staying or leaving the sensor range
+/// A Sensor's only job is to detect specific objects and announcing if these objects are entering, staying or leaving the sensor range
 /// </summary>
 public class Sensor : InputBroadcaster {
 
 	public Collider SensorCollider;
 
-	public bool DetectPlanes;
+	[Header("Broadcast data types")]
+	public bool BroadcastVector3;
+	public bool BroadcastGameObject;
 
+	[Header("Broadcast events")]
 	public bool BroadcastOnEnter;
 	public bool BroadcastOnStay;
 	public bool BroadcastOnExit;
 
+    [Header("Other Settings")]
 	public float DelayBetweenStayBroadcasts;
 
 	private float _timeUntilNextStayBroadcast;
@@ -37,7 +41,7 @@ public class Sensor : InputBroadcaster {
 
 		Debug.Log("Entering sensor range: " + other.name);
 
-		BroadcastVector3(other.transform.position);
+		Broadcast(other);
 	}
 
 	private void OnTriggerStay(Collider other)
@@ -50,7 +54,7 @@ public class Sensor : InputBroadcaster {
 		_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
 		_lastOnStayFrame = Time.frameCount;
 
-		BroadcastVector3(other.transform.position);
+		Broadcast(other);
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -60,6 +64,12 @@ public class Sensor : InputBroadcaster {
 
 		Debug.Log("Exiting sensor range: " + other.name);
 
-		BroadcastVector3(other.transform.position);
+		Broadcast(other);
+	}
+
+	private void Broadcast(Collider other)
+	{
+		if (BroadcastVector3) BroadcastVector3(other.transform.position);
+		if (BroadcastGameObject) BroadcastGameObject(other.gameObject);
 	}
 }
