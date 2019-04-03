@@ -1006,8 +1006,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerId: 0
-  LogInput: 0
-  Text: {fileID: 0}
 --- !u!1 &679951244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1210,7 @@ GameObject:
   - component: {fileID: 932258715}
   - component: {fileID: 932258713}
   - component: {fileID: 932258714}
+  - component: {fileID: 932258716}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1310,6 +1309,19 @@ MonoBehaviour:
   BroadcastOnStay: 1
   BroadcastOnExit: 0
   DelayBetweenStayBroadcasts: 1
+--- !u!114 &932258716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932258709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b831a7c2129e940910f250270dac3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerInput: {fileID: 1688378725}
 --- !u!1 &941646042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,7 +2671,7 @@ GameObject:
   - component: {fileID: 1688378726}
   - component: {fileID: 1688378725}
   m_Layer: 0
-  m_Name: GamePad
+  m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2678,8 +2690,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerId: 0
-  LogInput: 1
-  Text: {fileID: 1497500087}
 --- !u!4 &1688378726
 Transform:
   m_ObjectHideFlags: 0
