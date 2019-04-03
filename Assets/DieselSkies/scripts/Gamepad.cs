@@ -3,10 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using TMPro;
 
 public class Gamepad : MonoBehaviour
 {
     public int PlayerId = 0;
+
+    [Header("Debugging")]
+    public bool LogInput;
+    public TextMeshProUGUI Text;
 
     private Player _player;
 
@@ -28,12 +33,23 @@ public class Gamepad : MonoBehaviour
         bool SelectThird = _player.GetButton("Select Third Plane");
         bool SelectFourth = _player.GetButton("Select Fourth Plane");
 
-        Debug.Log(string.Format("({0} ; {1}) | first: {2} | second: {3} | third: {4} | foruth: {5}", 
-            axis.x.ToString("0.00"), 
-            axis.y.ToString("0.00"), 
-            SelectFirst, 
-            SelectSecond, 
-            SelectThird, 
-            SelectFourth));
+        if (LogInput)
+        {
+            string logText = string.Format("({0} ; {1}) | first: {2} | second: {3} | third: {4} | fourth: {5}",
+                axis.x.ToString("0.00"),
+                axis.y.ToString("0.00"),
+                SelectFirst,
+                SelectSecond,
+                SelectThird,
+                SelectFourth);
+            if (Text != null)
+            {
+                Text.text = logText;
+            }
+            else
+            {
+                Debug.Log(logText);
+            }
+        }
     }
 }
