@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: 2b27b8a6ee2297a4680234dacd9b45e6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: block_default_18
+    100002: cylinder_half_31
+    100004: cylinder_half_33
+    100006: cylinder_half_35
+    100008: cylinder_half_36
+    100010: cylinder_hollow_32
+    100012: cylinder_hollow_34
+    100014: cylinder_hollow_37
+    100016: cylinder_hollow_38
+    100018: detail_engine_12
+    100020: detail_exhaustVertical_22
+    100022: detail_exhaustVertical_25
+    100024: detail_exhaustVertical_26
+    100026: detail_exhaustVertical_27
+    100028: detail_propeller_7
+    100030: engine_barrel_3
+    100032: //RootNode
+    100034: glass_high_8
+    100036: plane_elevator_11
+    100038: plane_elevator_16
+    100040: plane_rudder_10
+    100042: slope_default_19
+    100044: wing_endLong_5
+    100046: wing_endLong_6
+    400000: block_default_18
+    400002: cylinder_half_31
+    400004: cylinder_half_33
+    400006: cylinder_half_35
+    400008: cylinder_half_36
+    400010: cylinder_hollow_32
+    400012: cylinder_hollow_34
+    400014: cylinder_hollow_37
+    400016: cylinder_hollow_38
+    400018: detail_engine_12
+    400020: detail_exhaustVertical_22
+    400022: detail_exhaustVertical_25
+    400024: detail_exhaustVertical_26
+    400026: detail_exhaustVertical_27
+    400028: detail_propeller_7
+    400030: engine_barrel_3
+    400032: //RootNode
+    400034: glass_high_8
+    400036: plane_elevator_11
+    400038: plane_elevator_16
+    400040: plane_rudder_10
+    400042: slope_default_19
+    400044: wing_endLong_5
+    400046: wing_endLong_6
+    2100000: _defaultMat
+    2100002: blueSteel
+    2100004: black
+    2100006: glass
+    2100008: tire
+    2100010: lightRed
+    2300000: block_default_18
+    2300002: cylinder_half_31
+    2300004: cylinder_half_33
+    2300006: cylinder_half_35
+    2300008: cylinder_half_36
+    2300010: cylinder_hollow_32
+    2300012: cylinder_hollow_34
+    2300014: cylinder_hollow_37
+    2300016: cylinder_hollow_38
+    2300018: detail_engine_12
+    2300020: detail_exhaustVertical_22
+    2300022: detail_exhaustVertical_25
+    2300024: detail_exhaustVertical_26
+    2300026: detail_exhaustVertical_27
+    2300028: detail_propeller_7
+    2300030: engine_barrel_3
+    2300032: glass_high_8
+    2300034: plane_elevator_11
+    2300036: plane_elevator_16
+    2300038: plane_rudder_10
+    2300040: slope_default_19
+    2300042: wing_endLong_5
+    2300044: wing_endLong_6
+    3300000: block_default_18
+    3300002: cylinder_half_31
+    3300004: cylinder_half_33
+    3300006: cylinder_half_35
+    3300008: cylinder_half_36
+    3300010: cylinder_hollow_32
+    3300012: cylinder_hollow_34
+    3300014: cylinder_hollow_37
+    3300016: cylinder_hollow_38
+    3300018: detail_engine_12
+    3300020: detail_exhaustVertical_22
+    3300022: detail_exhaustVertical_25
+    3300024: detail_exhaustVertical_26
+    3300026: detail_exhaustVertical_27
+    3300028: detail_propeller_7
+    3300030: engine_barrel_3
+    3300032: glass_high_8
+    3300034: plane_elevator_11
+    3300036: plane_elevator_16
+    3300038: plane_rudder_10
+    3300040: slope_default_19
+    3300042: wing_endLong_5
+    3300044: wing_endLong_6
+    4300000: engine_barrel_3
+    4300002: wing_endLong_5
+    4300004: wing_endLong_6
+    4300006: detail_propeller_7
+    4300008: glass_high_8
+    4300010: plane_rudder_10
+    4300012: plane_elevator_11
+    4300014: detail_engine_12
+    4300016: plane_elevator_16
+    4300018: block_default_18
+    4300020: slope_default_19
+    4300022: detail_exhaustVertical_22
+    4300024: detail_exhaustVertical_25
+    4300026: detail_exhaustVertical_26
+    4300028: detail_exhaustVertical_27
+    4300030: cylinder_half_31
+    4300032: cylinder_hollow_32
+    4300034: cylinder_half_33
+    4300036: cylinder_hollow_34
+    4300038: cylinder_half_35
+    4300040: cylinder_half_36
+    4300042: cylinder_hollow_37
+    4300044: cylinder_hollow_38
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: b202c2e49d3d307459f9cca6abda4857, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 1478fbae732bfa64a81f3ab278d291f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blueSteel
+    second: {fileID: 2100000, guid: 85d007e8f45a9e44799714785d8b37ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 42ac26a259703cf45b59b70b5ea308d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightRed
+    second: {fileID: 2100000, guid: 663672a1489331543a23b48713133c7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tire
+    second: {fileID: 2100000, guid: f0177cfe1c9c6cd4eaccaa7da16b94b2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
