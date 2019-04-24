@@ -2414,5 +2414,35 @@ PrefabInstance:
       propertyPath: _reverse
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4339754089660111129, guid: 97c8d704cc43d714890f4979bae7c471,
+        type: 3}
+      propertyPath: m_RelativeForce.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339754089660111129, guid: 97c8d704cc43d714890f4979bae7c471,
+        type: 3}
+      propertyPath: m_RelativeForce.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339754089660111129, guid: 97c8d704cc43d714890f4979bae7c471,
+        type: 3}
+      propertyPath: m_Force.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339754089660111129, guid: 97c8d704cc43d714890f4979bae7c471,
+        type: 3}
+      propertyPath: m_Force.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739864445080859510, guid: 97c8d704cc43d714890f4979bae7c471,
+        type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213038725360384633, guid: 97c8d704cc43d714890f4979bae7c471,
+        type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1688378725}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97c8d704cc43d714890f4979bae7c471, type: 3}

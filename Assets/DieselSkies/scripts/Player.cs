@@ -12,6 +12,8 @@ public class Player : InputBroadcaster
     private Rewired.Player _playerInput;
 
     #region RewiredInputs
+    Vector2 _axis;
+
     bool _selectFirstDown;
     bool _selectSecondDown;
     bool _selectThirdDown;
@@ -31,11 +33,13 @@ public class Player : InputBroadcaster
     private void Update()
     {
         GetInput();
+        HandleInput();
     }
 
     private void GetInput()
     {
-        Vector2 axis = new Vector2(_playerInput.GetAxis(RewiredConstants.ACTION_MOVE_HORIZONTAL), _playerInput.GetAxis(RewiredConstants.ACTION_MOVE_VERTICAL));
+        // get axis input
+        _axis = new Vector2(_playerInput.GetAxis(RewiredConstants.ACTION_MOVE_HORIZONTAL), _playerInput.GetAxis(RewiredConstants.ACTION_MOVE_VERTICAL));
 
         // get button down
         _selectFirstDown = _playerInput.GetButtonDown(RewiredConstants.ACTION_SELECT_PLANE_FIRST);
@@ -48,32 +52,45 @@ public class Player : InputBroadcaster
         _selectSecondUp = _playerInput.GetButtonUp(RewiredConstants.ACTION_SELECT_PLANE_SECOND);
         _selectThirdUp = _playerInput.GetButtonUp(RewiredConstants.ACTION_SELECT_PLANE_THIRD);
         _selectFourthUp = _playerInput.GetButtonUp(RewiredConstants.ACTION_SELECT_PLANE_FOURTH);
+    }
+
+    private void HandleInput()
+    {
+        // broadcast axis input
+        if (_axis != Vector2.zero)
+        {
+            BroadcastVector2(_axis);
+        }
 
         // broadcast button down
         if (_selectFirstDown)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_FIRST,
                 EventType = ButtonEvent.ButtonDown
             });
         }
         if (_selectSecondDown)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_SECOND,
                 EventType = ButtonEvent.ButtonDown
             });
         }
         if (_selectThirdDown)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_THIRD,
                 EventType = ButtonEvent.ButtonDown
             });
         }
         if (_selectFourthDown)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_FOURTH,
                 EventType = ButtonEvent.ButtonDown
             });
@@ -82,28 +99,32 @@ public class Player : InputBroadcaster
         // broadcast button up
         if (_selectFirstUp)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_FIRST,
                 EventType = ButtonEvent.ButtonUp
             });
         }
         if (_selectSecondUp)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_SECOND,
                 EventType = ButtonEvent.ButtonUp
             });
         }
         if (_selectThirdUp)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_THIRD,
                 EventType = ButtonEvent.ButtonUp
             });
         }
         if (_selectFourthUp)
         {
-            BroadcastRewiredButtonEvent(new RewiredButtonEventModel {
+            BroadcastRewiredButtonEvent(new RewiredButtonEventModel
+            {
                 ActionName = RewiredConstants.ACTION_SELECT_PLANE_FOURTH,
                 EventType = ButtonEvent.ButtonUp
             });

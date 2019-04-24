@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class MoveForward : MonoBehaviour {
 
-	[Range(0,1000)]
 	public float Speed;
 
     private Rigidbody _body;

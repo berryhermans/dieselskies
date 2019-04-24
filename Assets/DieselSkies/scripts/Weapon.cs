@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour {
 
 	private void Start()
 	{
-		Input.OnGameObjectBroadcast += OnInputHandler;
+		Input.GameObjectBroadcasted += OnInputHandler;
 	}
 
 	private void FixedUpdate()

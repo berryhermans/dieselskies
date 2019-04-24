@@ -11,12 +11,12 @@ public class Wings : MonoBehaviour
 
 	private WingState _currentState;
 	private WingState _previousState;
-	private Vector3 _target;
+	private Vector2 _target;
 
 	// Use this for initialization
 	void Start()
 	{
-		Input.OnVector3Broadcast += OnInputHandler;
+		Input.Vector2Broadcasted += OnVector2BroadcastedHandler;
 		SetState(WingState.IDLE);
 	}
 
@@ -26,7 +26,7 @@ public class Wings : MonoBehaviour
 		HandleState();
     }
 
-	private void OnInputHandler(Vector3 input)
+	private void OnVector2BroadcastedHandler(Vector2 input)
 	{
 		_target = input;
 		if (_currentState != WingState.TURNING) SetState(WingState.TURNING);
@@ -56,7 +56,7 @@ public class Wings : MonoBehaviour
 
 	private void HandleTurningState()
 	{
-		Quaternion _targetRotation = Quaternion.LookRotation(_target - Body.position);
+		Quaternion _targetRotation = Quaternion.LookRotation(_target - (Vector2)Body.position);
 		Body.rotation = Quaternion.RotateTowards(Body.rotation, _targetRotation, TurnStrength * Time.deltaTime);
 
 		// Are we on target yet?

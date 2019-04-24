@@ -8,9 +8,10 @@ public class PlaneController : InputBroadcaster
 
     private void OnEnable()
     {
-        PlayerInput.OnRewiredButtonEventBroadcast += (buttonEvent) =>
+        PlayerInput.Vector2Broadcasted += (vector2) =>
         {
-            Debug.Log(buttonEvent.ActionName + " | " + buttonEvent.EventType);
+            Debug.Log(vector2);
+            BroadcastVector2(vector2);
         };
     }
 }
