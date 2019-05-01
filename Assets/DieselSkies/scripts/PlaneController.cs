@@ -10,7 +10,6 @@ public class PlaneController : InputBroadcaster
     {
         PlayerInput.Vector2Broadcasted += (vector2) =>
         {
-            Debug.Log(vector2);
             BroadcastVector2(vector2);
         };
     }

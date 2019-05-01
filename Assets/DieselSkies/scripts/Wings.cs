@@ -11,7 +11,7 @@ public class Wings : MonoBehaviour
 
 	private WingState _currentState;
 	private WingState _previousState;
-	private Vector2 _target;
+    private float _targetRotationDegreesY;
 
 	// Use this for initialization
 	void Start()
@@ -28,7 +28,9 @@ public class Wings : MonoBehaviour
 
 	private void OnVector2BroadcastedHandler(Vector2 input)
 	{
-		_target = input;
+		_targetRotationDegreesY = (Mathf.Atan2(input.y, input.x) / Mathf.PI) * 180f;
+        if (_targetRotationDegreesY < 0) _targetRotationDegreesY += 360;
+        Debug.Log(_targetRotationDegreesY);
 		if (_currentState != WingState.TURNING) SetState(WingState.TURNING);
 	}
 
@@ -56,11 +58,12 @@ public class Wings : MonoBehaviour
 
 	private void HandleTurningState()
 	{
-		Quaternion _targetRotation = Quaternion.LookRotation(_target - (Vector2)Body.position);
-		Body.rotation = Quaternion.RotateTowards(Body.rotation, _targetRotation, TurnStrength * Time.deltaTime);
+        Vector3 bla = new Vector3(Body.rotation.x, _targetRotationDegreesY, Body.rotation.z);
+		Quaternion targetRotation = Quaternion.LookRotation(bla, Vector3.up);
+		Body.rotation = Quaternion.RotateTowards(Body.rotation, targetRotation, TurnStrength * Time.deltaTime);
 
 		// Are we on target yet?
-		if (Body.rotation == _targetRotation) SetState(WingState.IDLE);
+		if (Body.rotation == targetRotation) SetState(WingState.IDLE);
 	}
 }
 
