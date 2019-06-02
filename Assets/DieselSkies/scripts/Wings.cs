@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JuiceBox;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public class Wings : MonoBehaviour
 	void Start()
 	{
 		Input.Vector2Broadcasted += OnVector2BroadcastedHandler;
-	}
+    }
 
     void Update()
     {
@@ -24,11 +25,9 @@ public class Wings : MonoBehaviour
 
 	private void OnVector2BroadcastedHandler(Vector2 input)
 	{
-        // Set the target yaw by converting the given unit circle input to degrees
-		_targetYawRotation = (Mathf.Atan2(input.y, input.x) / Mathf.PI) * 180f;
-
-        Debug.Log(string.Format("input: {0} | degrees: {1}", input.ToString(), _targetYawRotation));
-	}
+        Debug.Log(Utility.Vector2ToUnityDegrees(input));
+        _targetYawRotation = Utility.Vector2ToUnityDegrees(input);
+    }
 
     private void Yaw()
     {
