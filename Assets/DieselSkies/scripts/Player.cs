@@ -9,9 +9,9 @@ public class Player : InputBroadcaster
 {
     public int PlayerId = 0;
 
+    #region RewiredInputs
     private Rewired.Player _playerInput;
 
-    #region RewiredInputs
     Vector2 _axis;
 
     bool _selectFirstDown;
