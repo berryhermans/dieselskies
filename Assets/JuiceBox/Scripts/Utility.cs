@@ -25,7 +25,7 @@ namespace JuiceBox
             // float radians = Mathf.Atan2(flippedDirection.y, flippedDirection.x);
 
             // // convert the radians to degrees;
-            // float degrees = radians * (180 / Mathf.PI);
+            // float degrees = radians * Mathf.Rad2Deg;
 
             // // add 90 degrees to correct the origin offset
             // degrees += 90;
@@ -33,7 +33,7 @@ namespace JuiceBox
             #endregion
 
             #region Optimised
-            return Mathf.Atan2(-direction.y, direction.x) * (180 / Mathf.PI) + 90;
+            return Mathf.Atan2(-direction.y, direction.x) * Mathf.Rad2Deg + 90;
             #endregion
         }
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
+    public string Name;
 	public InputBroadcaster Input;
 	public GameObject AttackSpawnpoint;
 	public GameObject ProjectilePrefab;
