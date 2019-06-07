@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour {
     [Range(0, 5)]
     public float TimeBetweenShots;
     [Range(0, 5)]
-    public float TimeBetweenLastInputAndLastShot;
+    public float CeaseFireDelay;
 
     private float _timeSinceLastShot;
     private float _timeSinceLastInput;
@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour {
             Shoot();
         }
 
-        if (_timeSinceLastInput >= TimeBetweenLastInputAndLastShot)
+        if (_timeSinceLastInput >= CeaseFireDelay)
         {
             _isShooting = false;
         }

@@ -103,13 +103,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230431877660053163}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7014923752891030805}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &803806144393502299
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803806144393502299}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.26, y: 0.05, z: 1}
@@ -1050,13 +1050,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4105583423041491723}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.0019999966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7607017710700965068}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &4599453261876803958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1619,9 @@ GameObject:
   - component: {fileID: 2690331939030492613}
   - component: {fileID: 8868061657576910309}
   - component: {fileID: 507979832101424726}
+  - component: {fileID: 1030693382622579541}
+  - component: {fileID: 6611081623298213909}
+  - component: {fileID: 2056046938373170312}
   m_Layer: 0
   m_Name: Plane_v2
   m_TagString: Untagged
@@ -1712,12 +1715,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SensorCollider: {fileID: 863780827566220137}
-  BroadcastVector3: 1
+  BroadcastVector3: 0
   BroadcastGameObject: 1
-  BroadcastOnEnter: 1
+  BroadcastOnEnter: 0
   BroadcastOnStay: 1
-  BroadcastOnExit: 1
-  DelayBetweenStayBroadcasts: 0
+  BroadcastOnExit: 0
+  DelayBetweenStayBroadcasts: 0.1
 --- !u!114 &507979832101424726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1736,7 +1739,64 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 1613611209568868, guid: b9a2adcedc5a7174cbd068091bb745e0,
     type: 3}
   TimeBetweenShots: 0.33
-  TimeBetweenLastInputAndLastShot: 0
+  CeaseFireDelay: 0.2
+--- !u!114 &1030693382622579541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773796899231050566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326a35da29f0a62438fd54eef6bb6092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: InnerLeftGun
+  Input: {fileID: 8868061657576910309}
+  AttackSpawnpoint: {fileID: 4105583423041491723}
+  ProjectilePrefab: {fileID: 1613611209568868, guid: b9a2adcedc5a7174cbd068091bb745e0,
+    type: 3}
+  TimeBetweenShots: 0.33
+  CeaseFireDelay: 0.2
+--- !u!114 &6611081623298213909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773796899231050566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326a35da29f0a62438fd54eef6bb6092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: InnerRightGun
+  Input: {fileID: 8868061657576910309}
+  AttackSpawnpoint: {fileID: 8126270945807187504}
+  ProjectilePrefab: {fileID: 1613611209568868, guid: b9a2adcedc5a7174cbd068091bb745e0,
+    type: 3}
+  TimeBetweenShots: 0.33
+  CeaseFireDelay: 0.2
+--- !u!114 &2056046938373170312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773796899231050566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326a35da29f0a62438fd54eef6bb6092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: OuterRightGun
+  Input: {fileID: 8868061657576910309}
+  AttackSpawnpoint: {fileID: 8704541756598839837}
+  ProjectilePrefab: {fileID: 1613611209568868, guid: b9a2adcedc5a7174cbd068091bb745e0,
+    type: 3}
+  TimeBetweenShots: 0.33
+  CeaseFireDelay: 0.2
 --- !u!1 &6870803104031914560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,13 +1975,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8126270945807187504}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.0019999966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1952355570999738887}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &8316765028645124485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,13 +2082,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8704541756598839837}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.0019999966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6316849289429592139}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &8822914774721340186
 GameObject:
   m_ObjectHideFlags: 0
