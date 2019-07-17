@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public float Damage;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (true)
+        IDamagable damagable = other.GetComponent<IDamagable>();
+        if (damagable != null)
         {
-            // if hitting a hull, do damage and destroy self.
+            damagable.TakeDamage(Damage);
+            Destroy(gameObject);
         }
     }
 }

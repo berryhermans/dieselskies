@@ -39,7 +39,7 @@ public class Sensor : InputBroadcaster {
 		if (!BroadcastOnEnter) return;
 		if (other.GetComponent<SensorTarget>() == null) return;
 
-		Debug.Log("Entering sensor range: " + other.name);
+		//Debug.Log("Entering sensor range: " + other.name);
 
 		Broadcast(other);
 	}
@@ -50,7 +50,7 @@ public class Sensor : InputBroadcaster {
 		if (_timeUntilNextStayBroadcast > 0 && _lastOnStayFrame != Time.frameCount) return;
 		if (other.GetComponent<SensorTarget>() == null) return; 
 
-		Debug.Log("Staying in sensor range: " + other.name);
+		//Debug.Log("Staying in sensor range: " + other.name);
 		_timeUntilNextStayBroadcast = DelayBetweenStayBroadcasts;
 		_lastOnStayFrame = Time.frameCount;
 
@@ -62,7 +62,7 @@ public class Sensor : InputBroadcaster {
 		if (!BroadcastOnExit) return;
 		if (other.GetComponent<SensorTarget>() == null) return;
 
-		Debug.Log("Exiting sensor range: " + other.name);
+		//Debug.Log("Exiting sensor range: " + other.name);
 
 		Broadcast(other);
 	}

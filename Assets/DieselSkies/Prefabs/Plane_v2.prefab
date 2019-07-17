@@ -1615,6 +1615,7 @@ GameObject:
   - component: {fileID: 8803012830622586380}
   - component: {fileID: 2959812849754224567}
   - component: {fileID: 9213038725360384633}
+  - component: {fileID: 7369677210892949237}
   - component: {fileID: 5739864445080859510}
   - component: {fileID: 2690331939030492613}
   - component: {fileID: 8868061657576910309}
@@ -1678,6 +1679,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInput: {fileID: 0}
   PlaneNumber: 1
+--- !u!114 &7369677210892949237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773796899231050566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a711428727e6ff94a95436175b82ca65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
 --- !u!114 &5739864445080859510
 MonoBehaviour:
   m_ObjectHideFlags: 0
