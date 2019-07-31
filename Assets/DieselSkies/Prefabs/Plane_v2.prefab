@@ -1626,6 +1626,7 @@ GameObject:
   - component: {fileID: 2056046938373170312}
   - component: {fileID: 1611540905603379086}
   - component: {fileID: 6427702044239586346}
+  - component: {fileID: 7331753659598488001}
   m_Layer: 0
   m_Name: Plane_v2
   m_TagString: Untagged
@@ -1852,6 +1853,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5401932, y: 0.020930385, z: 0.061668422}
   m_Center: {x: 0, y: 0.029224062, z: 0.060114253}
+--- !u!114 &7331753659598488001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773796899231050566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec7e7d810c953c42bc95af47c52f631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objects:
+  - Mesh: {fileID: 4359329874123314786}
+    MaterialIndex: 1
+    NewMaterial: {fileID: 2100000, guid: cf184b0d9539b1743984fbecb81e9bd8, type: 2}
+  - Mesh: {fileID: 4487503148089835583}
+    MaterialIndex: 1
+    NewMaterial: {fileID: 2100000, guid: cf184b0d9539b1743984fbecb81e9bd8, type: 2}
+  - Mesh: {fileID: 4896475289585750978}
+    MaterialIndex: 0
+    NewMaterial: {fileID: 2100000, guid: cf184b0d9539b1743984fbecb81e9bd8, type: 2}
+  - Mesh: {fileID: 4119214149744443771}
+    MaterialIndex: 1
+    NewMaterial: {fileID: 2100000, guid: cf184b0d9539b1743984fbecb81e9bd8, type: 2}
 --- !u!1 &6870803104031914560
 GameObject:
   m_ObjectHideFlags: 0
