@@ -11,9 +11,11 @@ public class MaterialAssigner : MonoBehaviour
     {
         foreach (MaterialAssignmentModel model in Objects)
         {
-            Debug.Log(string.Format("changing {0}'s {1} to {2}", model.Mesh.name, model.Mesh.materials[model.MaterialIndex].name, model.NewMaterial.name));
-            model.Mesh.materials[model.MaterialIndex] = model.NewMaterial;
-            Debug.Log(string.Format("{0}'s new colour is {1}", model.Mesh.name, model.Mesh.materials[model.MaterialIndex].name));
+            // Unity doesn't allow you to change a single material index
+            // instead copy the entire array, change the right index and copy the entire array back
+            Material[] materials = model.Mesh.materials;
+            materials[model.MaterialIndex] = model.NewMaterial;
+            model.Mesh.materials = materials;
         }
     }
 
