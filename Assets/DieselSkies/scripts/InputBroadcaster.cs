@@ -22,26 +22,26 @@ public class InputBroadcaster : MonoBehaviour {
 
     protected void BroadcastVector2(Vector2 vector2)
     {
-        if (Vector2Broadcasted != null) Vector2Broadcasted(vector2);
+        Vector2Broadcasted?.Invoke(vector2);
     }
 
     protected void BroadcastVector3(Vector3 vector3)
 	{
-		if (Vector3Broadcasted != null) Vector3Broadcasted(vector3);
-	}
+        Vector3Broadcasted?.Invoke(vector3);
+    }
 
 	protected void BroadcastGameObject(GameObject gameobject)
 	{
-		if (GameObjectBroadcasted != null) GameObjectBroadcasted(gameobject);
-	}
+        GameObjectBroadcasted?.Invoke(gameobject);
+    }
 
     protected void BroadcastString(string str)
     {
-        if (StringBroadcasted != null) StringBroadcasted(str);
+        StringBroadcasted?.Invoke(str);
     }
 
     protected void BroadcastRewiredButtonEvent(RewiredButtonEventModel buttonEvent)
     {
-        if (RewiredButtonEventBroadcasted != null) RewiredButtonEventBroadcasted(buttonEvent);
+        RewiredButtonEventBroadcasted?.Invoke(buttonEvent);
     }
 }
