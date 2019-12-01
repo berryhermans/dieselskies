@@ -25,8 +25,8 @@ public class Wings : MonoBehaviour
 
 	private void OnVector2BroadcastedHandler(Vector2 input)
 	{
-        Debug.Log(Utility.Vector2ToUnityDegrees(input));
-        _targetYawRotation = Utility.Vector2ToUnityDegrees(input);
+        Debug.Log(VectorUtility.Vector2ToUnityDegrees(input));
+        _targetYawRotation = VectorUtility.Vector2ToUnityDegrees(input);
     }
 
     private void Yaw()

@@ -4,16 +4,16 @@ using UnityEngine;
 
 namespace JuiceBox
 {
-    public static class Utility
+    public static class VectorUtility
     {
         /// <summary>
-        /// Converts a direction to a rotation degree in Unity.
+        /// Convert a direction to a rotation degree in Unity.
         /// </summary>
         /// <remarks>
         /// 0 degrees in math is at (1,0) and a positive increment is counterclockwise.
         /// 0 degrees in unity is at (0,1) and a positive increment is clockwise.
         /// </remarks>
-        /// <param name="direction">a vector2 that represents a direction</param>
+        /// <param name="direction">vector2 that represents a direction</param>
         /// <returns>a rotation in unity degrees</returns>
         public static float Vector2ToUnityDegrees(Vector2 direction)
         {
@@ -35,6 +35,28 @@ namespace JuiceBox
             #region Optimised
             return Mathf.Atan2(-direction.y, direction.x) * Mathf.Rad2Deg + 90;
             #endregion
+        }
+
+        /// <summary>
+        /// Return a random Vector3 between min [inclusive] and max [inclusive]
+        /// </summary>
+        /// <param name="min">minimum inclusive value</param>
+        /// <param name="max">maximum inclusive value</param>
+        /// <returns>random Vector3 between min [inclusive] and max [inclusive]</returns>
+        public static Vector3 RandomRange(Vector3 min, Vector3 max)
+        {
+            return min + Random.Range(0f, 1f) * (max - min);
+        }
+
+        /// <summary>
+        /// Return a random Vector2 between min [inclusive] and max [inclusive]
+        /// </summary>
+        /// <param name="min">minimum inclusive value</param>
+        /// <param name="max">maximum inclusive value</param>
+        /// <returns>random Vector2 between min [inclusive] and max [inclusive]</returns>
+        public static Vector2 RandomRange(Vector2 min, Vector2 max)
+        {
+            return min + Random.Range(0f, 1f) * (max - min);
         }
     }
 }
