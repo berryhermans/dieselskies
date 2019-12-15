@@ -9,6 +9,12 @@ public class PlaneSpawner : MonoBehaviour
     public float SpawnOffset;
     public SpawnEdge Edge;
     public MeshCollider PlayArea;
+    public GameObject PlanePrefab;
+
+    private void Start()
+    {
+        InvokeRepeating("Spawn", 0, 2);
+    }
 
     public void Spawn()
     {
@@ -42,7 +48,13 @@ public class PlaneSpawner : MonoBehaviour
                 Debug.LogErrorFormat("Unknown SpawnEdge '{0}'", Edge);
                 return;
         }
-        Vector3 RandomPointOnEdge = VectorUtility.RandomRange(min, max);
+        // get a random point on the edge
+        Vector3 spawnPosition = VectorUtility.RandomRange(min, max);
+        // get the rotation looking at the center of the play area
+        Quaternion spawnRotation = Quaternion.LookRotation((PlayArea.bounds.center - spawnPosition), Vector3.up);
+
+        // spawn a plane on the edge, looking towards the center
+        GameObject Plane = Instantiate(PlanePrefab, spawnPosition, spawnRotation);
     }
 
     public enum SpawnEdge

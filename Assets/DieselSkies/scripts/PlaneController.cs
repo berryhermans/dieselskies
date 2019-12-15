@@ -20,6 +20,7 @@ public class PlaneController : InputBroadcaster
     private void OnDisable()
     {
         PlayerInput.Vector2Broadcasted -= OnVector2BroadcastedHandler;
+        PlayerInput.RewiredButtonEventBroadcasted -= OnRewiredButtonEventBroadcastedHandler;
     }
     #endregion
 
