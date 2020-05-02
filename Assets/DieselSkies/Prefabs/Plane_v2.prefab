@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5145130917836430983}
   - component: {fileID: 7387736449802932314}
   - component: {fileID: 4487503148089835583}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WingRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,6 +56,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -90,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2653419129497449141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,6 +168,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -234,7 +236,7 @@ GameObject:
   - component: {fileID: 8008126192305669689}
   - component: {fileID: 6422801449604107164}
   - component: {fileID: 7602064863249266415}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExhaustLeftTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,6 +279,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -313,7 +316,7 @@ GameObject:
   - component: {fileID: 1952355570999738887}
   - component: {fileID: 595391482740329543}
   - component: {fileID: 9047117996385801646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,6 +360,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -392,7 +396,7 @@ GameObject:
   - component: {fileID: 7916103023082872932}
   - component: {fileID: 5220588518459554877}
   - component: {fileID: 3532788458380372262}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExhaustLeftBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,6 +439,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -471,7 +476,7 @@ GameObject:
   - component: {fileID: 2351047811778167274}
   - component: {fileID: 7716126558411685429}
   - component: {fileID: 4061455840502208097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WeaponBaseRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,6 +520,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -550,7 +556,7 @@ GameObject:
   - component: {fileID: 5709762910206143465}
   - component: {fileID: 3894522051000794752}
   - component: {fileID: 9074805101454230940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WeaponBaseLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,6 +600,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -629,7 +636,7 @@ GameObject:
   - component: {fileID: 2820282913606830368}
   - component: {fileID: 7392460682071103962}
   - component: {fileID: 8086487460768486446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackwingLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,6 +679,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -707,7 +715,7 @@ GameObject:
   - component: {fileID: 8539577922536538954}
   - component: {fileID: 1609651862067616694}
   - component: {fileID: 8759591060407158915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BodyTopBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,6 +758,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -785,7 +794,7 @@ GameObject:
   - component: {fileID: 7607017710700965068}
   - component: {fileID: 7797363062694746612}
   - component: {fileID: 6172757556335789567}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,6 +838,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -864,7 +874,7 @@ GameObject:
   - component: {fileID: 7014923752891030805}
   - component: {fileID: 471698510763163279}
   - component: {fileID: 7992415391022192142}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,6 +918,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -944,7 +955,7 @@ GameObject:
   - component: {fileID: 127965785553003303}
   - component: {fileID: 4119214149744443771}
   - component: {fileID: 5170391486793925832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,6 +1012,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1048,7 +1060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1139345075436358141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1092,7 @@ GameObject:
   - component: {fileID: 6660464766854702637}
   - component: {fileID: 2953451426704801292}
   - component: {fileID: 509020337195350477}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackwingRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,6 +1135,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1158,7 +1171,7 @@ GameObject:
   - component: {fileID: 8013474148999609893}
   - component: {fileID: 2963436070819979964}
   - component: {fileID: 583700321900112873}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1201,6 +1214,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1238,7 +1252,7 @@ GameObject:
   - component: {fileID: 2636979639128426286}
   - component: {fileID: 6151141319503538314}
   - component: {fileID: 5168975621188781406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WeaponBaseRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,6 +1296,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1317,7 +1332,7 @@ GameObject:
   - component: {fileID: 5043563963805028179}
   - component: {fileID: 3987077005710795151}
   - component: {fileID: 4501785421456779446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BodyTopSlope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1360,6 +1375,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1395,7 +1411,7 @@ GameObject:
   - component: {fileID: 465121677139167955}
   - component: {fileID: 7899961133700968450}
   - component: {fileID: 4359329874123314786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WingLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1440,6 +1456,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1476,7 +1493,7 @@ GameObject:
   - component: {fileID: 1011348271512339727}
   - component: {fileID: 2474902038492805219}
   - component: {fileID: 6643076499781963477}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WeaponBaseLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,6 +1537,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1555,7 +1573,7 @@ GameObject:
   - component: {fileID: 6316849289429592139}
   - component: {fileID: 1492853597857138960}
   - component: {fileID: 713285662561799040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,6 +1617,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1666,6 +1685,7 @@ Transform:
   m_Children:
   - {fileID: 7812707789371174043}
   - {fileID: 76523419724011845}
+  - {fileID: 4450375630340518754}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1894,6 +1914,85 @@ MonoBehaviour:
     MaterialIndex: 0
   - Mesh: {fileID: 4119214149744443771}
     MaterialIndex: 1
+--- !u!1 &6847639569290216645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4450375630340518754}
+  - component: {fileID: 7059964203059952927}
+  - component: {fileID: 4106364506906022877}
+  m_Layer: 5
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4450375630340518754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847639569290216645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8803012830622586380}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7059964203059952927
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847639569290216645}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4106364506906022877
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847639569290216645}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bffd6b8595db23d4e8f538d24fe30707, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &6870803104031914560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +2004,7 @@ GameObject:
   - component: {fileID: 600101521015630343}
   - component: {fileID: 8466644687220645801}
   - component: {fileID: 725470882798878331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExhaustRightBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,6 +2047,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1984,7 +2084,7 @@ GameObject:
   - component: {fileID: 8023376623468255758}
   - component: {fileID: 5038962088214938402}
   - component: {fileID: 8166150141137659271}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2027,6 +2127,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2060,7 +2161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5533774639582630904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2092,7 +2193,7 @@ GameObject:
   - component: {fileID: 4064080124880658823}
   - component: {fileID: 9030183716469351041}
   - component: {fileID: 638496816393866621}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackwingTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2135,6 +2236,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2168,7 +2270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7972176349221844512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2201,7 +2303,7 @@ GameObject:
   - component: {fileID: 6747713609006587419}
   - component: {fileID: 4896475289585750978}
   - component: {fileID: 7801251907660771551}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Propeller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2244,6 +2346,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2298,7 +2401,7 @@ GameObject:
   - component: {fileID: 6361633701719425485}
   - component: {fileID: 2864499569534656574}
   - component: {fileID: 1515321123338847820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExhaustRightTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2341,6 +2444,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
