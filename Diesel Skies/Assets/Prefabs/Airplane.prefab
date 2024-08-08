@@ -545,6 +545,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3115081509708482954}
+  - component: {fileID: 188585985435485670}
+  - component: {fileID: 425669521314526061}
   m_Layer: 0
   m_Name: Airplane
   m_TagString: Untagged
@@ -568,6 +570,34 @@ Transform:
   - {fileID: 3120323616957321910}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &188585985435485670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809481371938453895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5793aa10e7394ba58d54402fa6090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flight: {fileID: 425669521314526061}
+  target: {fileID: 0}
+--- !u!114 &425669521314526061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809481371938453895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d6cacce9430f944b547351c584a588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  turnSpeed: 90
 --- !u!1 &7046831111975903620
 GameObject:
   m_ObjectHideFlags: 0

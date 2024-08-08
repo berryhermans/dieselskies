@@ -3,7 +3,7 @@ using UnityEngine;
 public class Flight : MonoBehaviour
 {
     [SerializeField, Range(0, 10)] private float moveSpeed = 10f;
-    [SerializeField, Range(0, 10)] private  float turnSpeed = 5f;
+    [SerializeField, Range(0, 360)] private  float turnSpeed = 5f;
 
     private Vector3 targetDirection;
 
@@ -17,7 +17,7 @@ public class Flight : MonoBehaviour
         transform.position += moveSpeed * Time.deltaTime * transform.forward;
 
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
     public void SetTargetDirection(Vector3 direction)
