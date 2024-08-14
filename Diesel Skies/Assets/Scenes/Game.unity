@@ -137,6 +137,12 @@ PrefabInstance:
       objectReference: {fileID: 513333221}
     - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
         type: 3}
+      propertyPath: activeAirplanes
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726,
+        type: 2}
+    - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
+        type: 3}
       propertyPath: <Owner>k__BackingField
       value: 2
       objectReference: {fileID: 0}
@@ -215,6 +221,12 @@ PrefabInstance:
       objectReference: {fileID: 513333221}
     - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
         type: 3}
+      propertyPath: activeAirplanes
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726,
+        type: 2}
+    - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
+        type: 3}
       propertyPath: <Owner>k__BackingField
       value: 1
       objectReference: {fileID: 0}
@@ -291,6 +303,12 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 513333221}
+    - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
+        type: 3}
+      propertyPath: activeAirplanes
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726,
+        type: 2}
     - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
         type: 3}
       propertyPath: <Owner>k__BackingField
@@ -662,6 +680,12 @@ PrefabInstance:
       objectReference: {fileID: 513333221}
     - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
         type: 3}
+      propertyPath: activeAirplanes
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726,
+        type: 2}
+    - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
+        type: 3}
       propertyPath: <Owner>k__BackingField
       value: 1
       objectReference: {fileID: 0}
@@ -754,6 +778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3efba78a3c154e47a3287940022c55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
+  <Owner>k__BackingField: 1
 --- !u!4 &2048626631
 Transform:
   m_ObjectHideFlags: 0
@@ -782,6 +808,12 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 513333221}
+    - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
+        type: 3}
+      propertyPath: activeAirplanes
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726,
+        type: 2}
     - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
         type: 3}
       propertyPath: <Owner>k__BackingField
@@ -860,6 +892,12 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 513333221}
+    - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
+        type: 3}
+      propertyPath: activeAirplanes
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726,
+        type: 2}
     - target: {fileID: 188585985435485670, guid: 794a84a61d1678940a2b267b3aea934f,
         type: 3}
       propertyPath: <Owner>k__BackingField
