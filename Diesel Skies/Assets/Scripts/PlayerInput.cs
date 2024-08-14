@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    [field: SerializeField] public int Owner { get; private set; }
+    
     private void Update() {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.y = 0;
