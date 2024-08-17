@@ -21,6 +21,7 @@ public class PlayerInput : MonoBehaviour
             }
         }
 
+        if (!nearestAirplane) return;
         nearestAirplane.SetTarget(mouseWorldPos);
     }
 }
