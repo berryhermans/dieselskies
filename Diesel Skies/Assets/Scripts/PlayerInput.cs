@@ -1,27 +1,31 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerInput : MonoBehaviour
 {
-    [SerializeField] private ScriptableListAirplaneController activeAirplanes;
     [field: SerializeField] public int Owner { get; private set; }
-    
-    private void Update() {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPos.y = 0;
+    [SerializeField] private ScriptableListAirplaneController activeAirplanes;
+
+    public void SetNearestAirplaneTarget(Vector3 targetScreenPoint)
+    {
+        Vector3 inputWorldPos = Camera.main.ScreenToWorldPoint(targetScreenPoint);
+        inputWorldPos.y = 0;
 
         AirplaneController nearestAirplane = null;
         foreach (AirplaneController airplane in activeAirplanes)
         {
             if (airplane.Owner != Owner) continue;
-            nearestAirplane = nearestAirplane != null ? nearestAirplane : airplane;
+            nearestAirplane ??= airplane;
             
-            if (Vector3.Distance(airplane.transform.position, mouseWorldPos) < Vector3.Distance(nearestAirplane.transform.position, mouseWorldPos))
+            if (Vector3.Distance(airplane.transform.position, inputWorldPos) < Vector3.Distance(nearestAirplane.transform.position, inputWorldPos))
             {
                 nearestAirplane = airplane;
             }
         }
 
         if (!nearestAirplane) return;
-        nearestAirplane.SetTarget(mouseWorldPos);
+        nearestAirplane.SetTarget(inputWorldPos);
     }
+
+    
 }
