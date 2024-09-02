@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: 1
-  initialFlightDirection: {x: 1, y: 1, z: 1}
+  initialFlightDirection: {x: 1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
   airplanePrefab: {fileID: 6809481371938453895, guid: 794a84a61d1678940a2b267b3aea934f,
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: 2
-  initialFlightDirection: {x: 1, y: 0, z: 0}
+  initialFlightDirection: {x: -1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
   airplanePrefab: {fileID: 6809481371938453895, guid: 794a84a61d1678940a2b267b3aea934f,

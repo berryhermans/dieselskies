@@ -15,19 +15,16 @@ public class MouseInput : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
-            Debug.Log("Mouse click detected at position: " + Input.mousePosition);
             OnLeftMouseButton?.Invoke(Input.mousePosition);
         }
 
         if (Input.GetMouseButtonDown(1)) // Right mouse button
         {
-            Debug.Log("Right mouse click detected at position: " + Input.mousePosition);
             OnRightMouseButton?.Invoke(Input.mousePosition);
         }
 
         if (Input.GetMouseButtonDown(2)) // Middle mouse button
         {
-            Debug.Log("Middle mouse click detected at position: " + Input.mousePosition);
             OnMiddleMouseButton?.Invoke(Input.mousePosition);
         }
     }

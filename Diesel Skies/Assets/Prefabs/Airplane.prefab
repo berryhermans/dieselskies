@@ -105,6 +105,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &945313931412242305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3250884566005460226}
+  - component: {fileID: 1678447066420826652}
+  m_Layer: 0
+  m_Name: Gun L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3250884566005460226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945313931412242305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6488507096266705690}
+  - {fileID: 6623039916115798548}
+  m_Father: {fileID: 3120323616957321910}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678447066420826652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945313931412242305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d41918dc22b4ed46943018884f29227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.25
+  firePoint: {fileID: 6623039916115798548}
+  bulletPrefab: {fileID: 9026925778033848477, guid: b0de086c4b6c9d24ea40dcdcadd2008b,
+    type: 3}
 --- !u!1 &1872141489696889253
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +168,7 @@ GameObject:
   - component: {fileID: 7205386086577715142}
   - component: {fileID: 5733851908965539442}
   m_Layer: 0
-  m_Name: Gun L
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,12 +182,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872141489696889253}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2, y: -0.2, z: 0.471}
-  m_LocalScale: {x: 0.101517625, y: 0.21782224, z: 0.101517625}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.20000002, y: -0.20000002, z: 0.47100002}
+  m_LocalScale: {x: 0.10151763, y: 0.21782224, z: 0.101517625}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3120323616957321910}
+  m_Father: {fileID: 3250884566005460226}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &6006001602526681885
 MeshFilter:
@@ -212,6 +262,56 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &2592938090111051659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8457618665559246666}
+  - component: {fileID: 3612691804681992852}
+  m_Layer: 0
+  m_Name: Gun R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8457618665559246666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592938090111051659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6011961908307140971}
+  - {fileID: 7736871558713327515}
+  m_Father: {fileID: 3120323616957321910}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3612691804681992852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592938090111051659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d41918dc22b4ed46943018884f29227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.25
+  firePoint: {fileID: 7736871558713327515}
+  bulletPrefab: {fileID: 9026925778033848477, guid: b0de086c4b6c9d24ea40dcdcadd2008b,
+    type: 3}
 --- !u!1 &3443491553609954029
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,8 +347,8 @@ Transform:
   - {fileID: 2084660638767551412}
   - {fileID: 2334206117632904238}
   - {fileID: 2416163040412289036}
-  - {fileID: 6011961908307140971}
-  - {fileID: 6488507096266705690}
+  - {fileID: 8457618665559246666}
+  - {fileID: 3250884566005460226}
   m_Father: {fileID: 3115081509708482954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5134622996822910902
@@ -335,7 +435,7 @@ GameObject:
   - component: {fileID: 1155741074249230321}
   - component: {fileID: 2971210485991552}
   m_Layer: 0
-  m_Name: Gun R
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,12 +449,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3666842589759250046}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.2, y: -0.2, z: 0.471}
-  m_LocalScale: {x: 0.101517625, y: 0.21782224, z: 0.101517625}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.20000002, y: -0.20000002, z: 0.47100002}
+  m_LocalScale: {x: 0.10151763, y: 0.21782224, z: 0.101517625}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3120323616957321910}
+  m_Father: {fileID: 8457618665559246666}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1185791974708184986
 MeshFilter:
@@ -429,6 +529,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &4116230322283968773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6623039916115798548}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6623039916115798548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116230322283968773}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20000002, y: -0.20000005, z: 0.7541691}
+  m_LocalScale: {x: 0.10151764, y: 0.21782224, z: 0.101517625}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3250884566005460226}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5228202497759150869
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +667,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &6485222839629579286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7736871558713327515}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7736871558713327515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6485222839629579286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.20000002, y: -0.20000005, z: 0.754169}
+  m_LocalScale: {x: 0.10151764, y: 0.21782224, z: 0.101517625}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8457618665559246666}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6809481371938453895
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +746,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
   flight: {fileID: 425669521314526061}
-  <Owner>k__BackingField: 0
 --- !u!114 &425669521314526061
 MonoBehaviour:
   m_ObjectHideFlags: 0
