@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8b798e57cca154fb7b1796f6f87056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnLeftMouseButton:
+  <OnLeftMouseButton>k__BackingField:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2048626630}
@@ -403,10 +403,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnMiddleMouseButton:
+  <OnMiddleMouseButton>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  OnRightMouseButton:
+  <OnRightMouseButton>k__BackingField:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1266144922}

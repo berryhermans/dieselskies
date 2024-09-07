@@ -773,6 +773,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f66317be7f72546a7de4838408e317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <MaxHealth>k__BackingField: 0
+  <CurrentHealth>k__BackingField: 0
+  startFullHealth: 1
 --- !u!1 &7046831111975903620
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,9 +3,9 @@ using UnityEngine.Events;
 
 public class MouseInput : MonoBehaviour
 {
-    [SerializeField] private UnityEvent<Vector3> OnLeftMouseButton;
-    [SerializeField] private UnityEvent<Vector3> OnMiddleMouseButton;
-    [SerializeField] private UnityEvent<Vector3> OnRightMouseButton;
+    [field: SerializeField] public UnityEvent<Vector3> OnLeftMouseButton { get; private set; }
+    [field: SerializeField] public UnityEvent<Vector3> OnMiddleMouseButton { get; private set; }
+    [field: SerializeField] public UnityEvent<Vector3> OnRightMouseButton { get; private set; }
     
     private void Update() {
         DetectMouseInput();

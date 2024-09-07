@@ -1,11 +1,11 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AirplaneController : MonoBehaviour
+public class AirplaneController : MonoBehaviour, IDamageable
 {
     [SerializeField] private ScriptableListAirplaneController activeAirplanes;
     [SerializeField] private Flight flight;
+    [SerializeField] private Health health;
     public int Owner { get; private set; }
 
     private bool isInitialized = false;
@@ -40,5 +40,10 @@ public class AirplaneController : MonoBehaviour
     {
         Debug.Log($"Set target to {target}, new direction = {target - transform.position}");
         flight.SetTargetDirection(target - transform.position);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        health.TakeDamage(amount);
     }
 }
