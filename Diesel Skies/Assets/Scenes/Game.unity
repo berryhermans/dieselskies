@@ -122,6 +122,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &403462295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403462297}
+  - component: {fileID: 403462296}
+  m_Layer: 0
+  m_Name: Airplane Spawner - Player 2 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &403462296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403462295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: 2
+  initialFlightDirection: {x: -1, y: 0, z: 0}
+  maxActiveAirplanes: 3
+  spawnCooldown: 2
+  airplanePrefab: {fileID: 6809481371938453895, guid: 794a84a61d1678940a2b267b3aea934f,
+    type: 3}
+  activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
+--- !u!4 &403462297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403462295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 43.32, y: 0, z: -7.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &583095753
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +184,7 @@ GameObject:
   - component: {fileID: 583095755}
   - component: {fileID: 583095754}
   m_Layer: 0
-  m_Name: Airplane Spawner - Player 1
+  m_Name: Airplane Spawner - Player 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,6 +318,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &886036038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886036040}
+  - component: {fileID: 886036039}
+  m_Layer: 0
+  m_Name: Airplane Spawner - Player 1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &886036039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886036038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: 1
+  initialFlightDirection: {x: 1, y: 0, z: 0}
+  maxActiveAirplanes: 3
+  spawnCooldown: 2
+  airplanePrefab: {fileID: 6809481371938453895, guid: 794a84a61d1678940a2b267b3aea934f,
+    type: 3}
+  activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
+--- !u!4 &886036040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886036038}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.79, y: 0, z: -4.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +538,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1146926726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146926728}
+  - component: {fileID: 1146926727}
+  m_Layer: 0
+  m_Name: Airplane Spawner - Player 1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1146926727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146926726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: 1
+  initialFlightDirection: {x: 1, y: 0, z: 0}
+  maxActiveAirplanes: 3
+  spawnCooldown: 2
+  airplanePrefab: {fileID: 6809481371938453895, guid: 794a84a61d1678940a2b267b3aea934f,
+    type: 3}
+  activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
+--- !u!4 &1146926728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146926726}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.39, y: 0, z: 4.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266144921
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +703,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1511815950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511815952}
+  - component: {fileID: 1511815951}
+  m_Layer: 0
+  m_Name: Airplane Spawner - Player 2 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1511815951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511815950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: 2
+  initialFlightDirection: {x: -1, y: 0, z: 0}
+  maxActiveAirplanes: 3
+  spawnCooldown: 2
+  airplanePrefab: {fileID: 6809481371938453895, guid: 794a84a61d1678940a2b267b3aea934f,
+    type: 3}
+  activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
+--- !u!4 &1511815952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511815950}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 43.32, y: 0, z: 6.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1723304903
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +765,7 @@ GameObject:
   - component: {fileID: 1723304905}
   - component: {fileID: 1723304904}
   m_Layer: 0
-  m_Name: Airplane Spawner - Player 2
+  m_Name: Airplane Spawner - Player 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -657,5 +861,9 @@ SceneRoots:
   - {fileID: 2048626631}
   - {fileID: 1266144923}
   - {fileID: 583095755}
+  - {fileID: 886036040}
+  - {fileID: 1146926728}
   - {fileID: 1723304905}
+  - {fileID: 1511815952}
+  - {fileID: 403462297}
   - {fileID: 1426220604}

@@ -36,7 +36,7 @@ public class AirplaneSpawner : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject AirplaneObject = Instantiate(airplanePrefab, transform.position, Quaternion.identity);
+        GameObject AirplaneObject = Instantiate(airplanePrefab, transform.position, Quaternion.LookRotation(initialFlightDirection));
         AirplaneController airplaneController = AirplaneObject.GetComponent<AirplaneController>();
         airplaneController.Init(owner, initialFlightDirection);
     }
