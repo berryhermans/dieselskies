@@ -16,6 +16,8 @@ public class AirplaneController : MonoBehaviour, IDamageable
     }
 
     private void Start() {
+        health.OnHealthZero += DestroyPlane;
+
         activeAirplanes.Add(this);
     }
 
@@ -26,10 +28,13 @@ public class AirplaneController : MonoBehaviour, IDamageable
         }
     }
 
+    private void OnDestroy() {
+        health.OnHealthZero -= DestroyPlane;
+    }
+
     public void Init(int owner, Vector3 initialDirection)
     {
         if(isInitialized) throw new Exception("Init may only be called once.");
-        Debug.Log("init plane");
         Owner = owner;
         flight.SetTargetDirection(initialDirection);
 
@@ -45,5 +50,11 @@ public class AirplaneController : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         health.TakeDamage(amount);
+    }
+
+    public void DestroyPlane()
+    {
+        activeAirplanes.Remove(this);
+        Destroy(gameObject);
     }
 }

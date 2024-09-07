@@ -23,6 +23,5 @@ public class Flight : MonoBehaviour
     public void SetTargetDirection(Vector3 direction)
     {
         targetDirection = direction.normalized;
-        Debug.Log($"new target direction = {targetDirection}");
     }
 }

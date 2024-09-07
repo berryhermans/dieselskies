@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6534231200436071406}
   - component: {fileID: 6724194509130300655}
   - component: {fileID: 3842772167729087218}
-  - component: {fileID: 7989198713737018454}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -84,27 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7989198713737018454
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197660349738422800}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9026925778033848477
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +94,8 @@ GameObject:
   - component: {fileID: 500901582991390698}
   - component: {fileID: 5933987633184504500}
   - component: {fileID: 3747921471589942909}
+  - component: {fileID: 8358420953304986897}
+  - component: {fileID: 6870650035648758537}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -151,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fb58d6a89eb8a4a853ebd53a9a88a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 3
   duration: 0.5
 --- !u!114 &3747921471589942909
 MonoBehaviour:
@@ -167,3 +147,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 50
   turnSpeed: 0
+--- !u!135 &8358420953304986897
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026925778033848477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6870650035648758537
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026925778033848477}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
