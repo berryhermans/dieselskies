@@ -13,24 +13,16 @@ public class AirplaneSpawner : MonoBehaviour
 
     private float spawnTimer = 0;
 
-    private void Start() {
-        StartCoroutine(SpawnTimer());
-    }
-
-    private IEnumerator SpawnTimer()
+    private void Update()
     {
-        while(true)
+        if (spawnTimer >= spawnCooldown && activeAirplanes.Where(x => x.Owner == owner).ToArray().Length < maxActiveAirplanes)
         {
-            if(spawnTimer >= spawnCooldown && activeAirplanes.Where(x => x.Owner == owner).ToArray().Length < maxActiveAirplanes)
-            {
-                Spawn();
-                spawnTimer = 0;
-            }
-            else 
-            {
-                spawnTimer += Time.deltaTime;
-            }
-            yield return null;
+            Spawn();
+            spawnTimer = 0;
+        }
+        else
+        {
+            spawnTimer += Time.deltaTime;
         }
     }
 
@@ -39,5 +31,6 @@ public class AirplaneSpawner : MonoBehaviour
         GameObject AirplaneObject = Instantiate(airplanePrefab, transform.position, Quaternion.LookRotation(initialFlightDirection));
         AirplaneController airplaneController = AirplaneObject.GetComponent<AirplaneController>();
         airplaneController.Init(owner, initialFlightDirection);
+        activeAirplanes.Add(airplaneController);
     }
 }

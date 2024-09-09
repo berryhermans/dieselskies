@@ -17,8 +17,6 @@ public class AirplaneController : MonoBehaviour, IDamageable
 
     private void Start() {
         health.OnHealthZero += DestroyPlane;
-
-        activeAirplanes.Add(this);
     }
 
     private void Update() {
