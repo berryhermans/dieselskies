@@ -9,21 +9,9 @@ public class AirplaneController : MonoBehaviour, IDamageable
     public int Owner { get; private set; }
 
     private bool isInitialized = false;
-    private IWeapon[] weapons = new IWeapon[0];
-
-    private void Awake() {
-        weapons = GetComponentsInChildren<IWeapon>();
-    }
 
     private void Start() {
         health.OnHealthZero += DestroyPlane;
-    }
-
-    private void Update() {
-        foreach (IWeapon weapon in weapons)
-        {
-            weapon.Fire();
-        }
     }
 
     private void OnDestroy() {
@@ -41,7 +29,6 @@ public class AirplaneController : MonoBehaviour, IDamageable
 
     public void SetTarget(Vector3 target)
     {
-        Debug.Log($"Set target to {target}, new direction = {target - transform.position}");
         flight.SetTargetDirection(target - transform.position);
     }
 

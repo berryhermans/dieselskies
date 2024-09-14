@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour, IWeapon
@@ -10,7 +11,7 @@ public class Gun : MonoBehaviour, IWeapon
 
     private float nextFireTime = 0f;
 
-    public void Fire()
+    public void Fire(List<GameObject> _)
     {
         if (Time.time > nextFireTime)
         {
