@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 3427932273747339163}
   - component: {fileID: 8139786652007675803}
   - component: {fileID: 2299177092976331879}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
