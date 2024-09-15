@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AirplaneController : MonoBehaviour, IDamageable
@@ -6,7 +7,8 @@ public class AirplaneController : MonoBehaviour, IDamageable
     [SerializeField] private ScriptableListAirplaneController activeAirplanes;
     [SerializeField] private Flight flight;
     [SerializeField] private Health health;
-    public int Owner { get; private set; }
+    [SerializeField] private List<Sensor> sensors;
+    public int Team { get; private set; }
 
     private bool isInitialized = false;
 
@@ -18,11 +20,16 @@ public class AirplaneController : MonoBehaviour, IDamageable
         health.OnHealthZero -= DestroyPlane;
     }
 
-    public void Init(int owner, Vector3 initialDirection)
+    public void Init(int team, Vector3 initialDirection)
     {
         if(isInitialized) throw new Exception("Init may only be called once.");
-        Owner = owner;
+
+        Team = team;
         flight.SetTargetDirection(initialDirection);
+        foreach (Sensor sensor in sensors)
+        {
+            sensor.Init(Team);
+        }
 
         isInitialized = true;
     }

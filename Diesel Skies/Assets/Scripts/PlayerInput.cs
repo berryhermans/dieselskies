@@ -14,7 +14,7 @@ public class PlayerInput : MonoBehaviour
         AirplaneController nearestAirplane = null;
         foreach (AirplaneController airplane in activeAirplanes)
         {
-            if (airplane.Owner != Owner) continue;
+            if (airplane.Team != Owner) continue;
             nearestAirplane = nearestAirplane != null ? nearestAirplane : airplane;
             
             if (Vector3.Distance(airplane.transform.position, inputWorldPos) < Vector3.Distance(nearestAirplane.transform.position, inputWorldPos))

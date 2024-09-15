@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirplaneSpawner : MonoBehaviour
 {
-    [SerializeField] private int owner;
+    [SerializeField] private int team;
     [SerializeField] private Vector3 initialFlightDirection;
     [SerializeField] private int maxActiveAirplanes;
     [SerializeField] private float spawnCooldown;
@@ -15,7 +15,7 @@ public class AirplaneSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (spawnTimer >= spawnCooldown && activeAirplanes.Where(x => x.Owner == owner).ToArray().Length < maxActiveAirplanes)
+        if (spawnTimer >= spawnCooldown && activeAirplanes.Where(x => x.Team == team).ToArray().Length < maxActiveAirplanes)
         {
             Spawn();
             spawnTimer = 0;
@@ -30,7 +30,7 @@ public class AirplaneSpawner : MonoBehaviour
     {
         GameObject AirplaneObject = Instantiate(airplanePrefab, transform.position, Quaternion.LookRotation(initialFlightDirection));
         AirplaneController airplaneController = AirplaneObject.GetComponent<AirplaneController>();
-        airplaneController.Init(owner, initialFlightDirection);
+        airplaneController.Init(team, initialFlightDirection);
         activeAirplanes.Add(airplaneController);
     }
 }

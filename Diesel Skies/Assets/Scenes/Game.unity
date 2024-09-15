@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 2
+  team: 2
   initialFlightDirection: {x: -1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 1
+  team: 1
   initialFlightDirection: {x: 1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 1
+  team: 1
   initialFlightDirection: {x: 1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 1
+  team: 1
   initialFlightDirection: {x: 1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 2
+  team: 2
   initialFlightDirection: {x: -1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: 2
+  team: 2
   initialFlightDirection: {x: -1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2

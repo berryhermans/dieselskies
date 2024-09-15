@@ -777,6 +777,8 @@ MonoBehaviour:
   activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
   flight: {fileID: 425669521314526061}
   health: {fileID: 1052738858901814437}
+  sensors:
+  - {fileID: 8139786652007675803}
 --- !u!114 &425669521314526061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,7 +925,7 @@ GameObject:
   - component: {fileID: 8139786652007675803}
   - component: {fileID: 2299177092976331879}
   m_Layer: 6
-  m_Name: Sensor
+  m_Name: Gun Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -956,7 +958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66b059bcbd24b545a10a9cf7109b1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectAirplanes: 1
+  detectFriendlyAirplanes: 0
+  detectEnemyAirplanes: 1
   detectProjectiles: 0
   <OnDetect>k__BackingField:
     m_PersistentCalls:
