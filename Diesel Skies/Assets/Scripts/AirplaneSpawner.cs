@@ -13,7 +13,7 @@ public class AirplaneSpawner : MonoBehaviour
 
     private float spawnTimer = 0;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (spawnTimer >= spawnCooldown && activeAirplanes.Where(x => x.Team == team).ToArray().Length < maxActiveAirplanes)
         {

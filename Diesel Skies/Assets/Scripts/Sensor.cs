@@ -39,11 +39,11 @@ public class Sensor : MonoBehaviour
         detectedGameObjects.Remove(other.gameObject);     
     }
 
-    private void Update() 
+    private void FixedUpdate() 
     {
-        // OnTriggerExit is not called when objects get destroyed, need to clean the list manually
-        foreach (GameObject detected in detectedGameObjects)
+        for (int i = detectedGameObjects.Count - 1; i >= 0 ; i--)
         {
+            GameObject detected = detectedGameObjects[i];
             if (detected == null) detectedGameObjects.Remove(detected);
         }
 

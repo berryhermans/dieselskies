@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
         selfDestructTime = Time.time + duration;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Time.time >= selfDestructTime) Destroy(gameObject);
     }
