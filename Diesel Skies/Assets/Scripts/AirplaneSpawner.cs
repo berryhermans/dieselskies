@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirplaneSpawner : MonoBehaviour
 {
-    [SerializeField] private int team;
+    [SerializeField] private TeamVariable team;
     [SerializeField] private Vector3 initialFlightDirection;
     [SerializeField] private int maxActiveAirplanes;
     [SerializeField] private float spawnCooldown;

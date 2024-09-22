@@ -8,7 +8,7 @@ public class AirplaneController : MonoBehaviour, IDamageable
     [SerializeField] private Flight flight;
     [SerializeField] private Health health;
     [SerializeField] private List<Sensor> sensors;
-    public int Team { get; private set; }
+    public TeamVariable Team { get; private set; }
 
     private bool isInitialized = false;
 
@@ -20,7 +20,7 @@ public class AirplaneController : MonoBehaviour, IDamageable
         health.OnHealthZero -= DestroyPlane;
     }
 
-    public void Init(int team, Vector3 initialDirection)
+    public void Init(TeamVariable team, Vector3 initialDirection)
     {
         if(isInitialized) throw new Exception("Init may only be called once.");
 

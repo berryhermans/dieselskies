@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 2
+  team: {fileID: 11400000, guid: 0fb14d3fb5b893344821bad2ee69f3e0, type: 2}
   initialFlightDirection: {x: -1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
+  team: {fileID: 11400000, guid: 8474332afd9180043a8579f15754602f, type: 2}
   initialFlightDirection: {x: 1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -234,6 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -318,6 +319,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &886036038
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
+  team: {fileID: 11400000, guid: 8474332afd9180043a8579f15754602f, type: 2}
   initialFlightDirection: {x: 1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -567,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
+  team: {fileID: 11400000, guid: 8474332afd9180043a8579f15754602f, type: 2}
   initialFlightDirection: {x: 1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -618,7 +642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3efba78a3c154e47a3287940022c55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Owner>k__BackingField: 2
+  <Team>k__BackingField: {fileID: 11400000, guid: 0fb14d3fb5b893344821bad2ee69f3e0,
+    type: 2}
   activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
 --- !u!4 &1266144923
 Transform:
@@ -732,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 2
+  team: {fileID: 11400000, guid: 0fb14d3fb5b893344821bad2ee69f3e0, type: 2}
   initialFlightDirection: {x: -1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -783,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889c12fa543c1644a8d2b427d2797340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 2
+  team: {fileID: 11400000, guid: 0fb14d3fb5b893344821bad2ee69f3e0, type: 2}
   initialFlightDirection: {x: -1, y: 0, z: 0}
   maxActiveAirplanes: 3
   spawnCooldown: 2
@@ -834,7 +859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3efba78a3c154e47a3287940022c55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Owner>k__BackingField: 1
+  <Team>k__BackingField: {fileID: 11400000, guid: 8474332afd9180043a8579f15754602f,
+    type: 2}
   activeAirplanes: {fileID: 11400000, guid: dc0fb65d67aca004bac0a0532fced726, type: 2}
 --- !u!4 &2048626631
 Transform:

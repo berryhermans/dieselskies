@@ -12,7 +12,7 @@ public class Sensor : MonoBehaviour
 
 
     private readonly List<GameObject> detectedGameObjects = new();
-    private int team;
+    private TeamVariable team;
     private bool isInitialized = false;
 
     private void OnTriggerEnter(Collider other) 
@@ -53,7 +53,7 @@ public class Sensor : MonoBehaviour
         }
     }
 
-    public void Init(int team)
+    public void Init(TeamVariable team)
     {
         if(isInitialized) throw new Exception("Init may only be called once.");
         this.team = team;

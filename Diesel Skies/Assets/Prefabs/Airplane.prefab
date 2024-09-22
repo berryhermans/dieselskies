@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5216317617571184952}
   - component: {fileID: 859200629313973137}
   - component: {fileID: 7325108062551566325}
+  - component: {fileID: 4927132947149130531}
   m_Layer: 0
   m_Name: Wings
   m_TagString: Untagged
@@ -105,6 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4927132947149130531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937576514257196782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91039b543899b6f4ca4d5f82ae08629b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &945313931412242305
 GameObject:
   m_ObjectHideFlags: 0

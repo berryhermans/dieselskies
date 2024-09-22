@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerInput : MonoBehaviour
 {
-    [field: SerializeField] public int Owner { get; private set; }
+    [field: SerializeField] public TeamVariable Team { get; private set; }
     [SerializeField] private ScriptableListAirplaneController activeAirplanes;
 
     public void SetNearestAirplaneTarget(Vector3 targetScreenPoint)
@@ -14,7 +14,7 @@ public class PlayerInput : MonoBehaviour
         AirplaneController nearestAirplane = null;
         foreach (AirplaneController airplane in activeAirplanes)
         {
-            if (airplane.Team != Owner) continue;
+            if (airplane.Team != Team) continue;
             nearestAirplane = nearestAirplane != null ? nearestAirplane : airplane;
             
             if (Vector3.Distance(airplane.transform.position, inputWorldPos) < Vector3.Distance(nearestAirplane.transform.position, inputWorldPos))
