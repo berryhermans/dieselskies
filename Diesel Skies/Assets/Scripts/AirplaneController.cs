@@ -31,6 +31,11 @@ public class AirplaneController : MonoBehaviour, IDamageable
             sensor.Init(Team);
         }
 
+        foreach (TeamColor teamColor in GetComponentsInChildren<TeamColor>())
+        {
+            teamColor.SetColor(team.Value.Color);
+        }
+
         isInitialized = true;
     }
 
