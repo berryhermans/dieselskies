@@ -1,40 +1,40 @@
 using System;
 using System.Collections.Generic;
+using FishNet.Object;
 using UnityEngine;
 
-public class AirplaneController : MonoBehaviour, IDamageable
-{
-    [SerializeField] private ScriptableListAirplaneController activeAirplanes;
+public class AirplaneController : NetworkBehaviour, IDamageable
+{  
     [SerializeField] private Flight flight;
     [SerializeField] private Health health;
     [SerializeField] private List<Sensor> sensors;
-    public TeamVariable Team { get; private set; }
+    public PlayerController Player;
 
     private bool isInitialized = false;
 
-    private void Start() {
-        health.OnHealthZero += DestroyPlane;
-    }
+    // private void Start() {
+    //     health.OnHealthZero += DestroyPlane;
+    // }
 
-    private void OnDestroy() {
-        health.OnHealthZero -= DestroyPlane;
-    }
+    // private void OnDestroy() {
+    //     health.OnHealthZero -= DestroyPlane;
+    // }
 
-    public void Init(TeamVariable team, Vector3 initialDirection)
+    public void Init(PlayerController player, Vector3 initialDirection)
     {
         if(isInitialized) throw new Exception("Init may only be called once.");
 
-        Team = team;
+        Player = player;
         flight.SetTargetDirection(initialDirection);
         foreach (Sensor sensor in sensors)
         {
-            sensor.Init(Team);
+            sensor.Init(Player);
         }
 
-        foreach (TeamColor teamColor in GetComponentsInChildren<TeamColor>())
-        {
-            teamColor.SetColor(team.Value.Color);
-        }
+        // foreach (TeamColor teamColor in GetComponentsInChildren<TeamColor>())
+        // {
+        //     teamColor.SetColor(owner.Value.Color);
+        // }
 
         isInitialized = true;
     }
@@ -51,7 +51,6 @@ public class AirplaneController : MonoBehaviour, IDamageable
 
     public void DestroyPlane()
     {
-        activeAirplanes.Remove(this);
         Destroy(gameObject);
     }
 }

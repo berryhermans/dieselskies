@@ -1,36 +1,37 @@
-using System.Collections;
-using System.Linq;
+using FishNet.Object;
 using UnityEngine;
 
-public class AirplaneSpawner : MonoBehaviour
+// TODO: does it **need** to be a networkbehaviour in order to spawn things?
+public class AirplaneSpawner : NetworkBehaviour
 {
-    [SerializeField] private TeamVariable team;
+    [SerializeField] private PlayerController player;
     [SerializeField] private Vector3 initialFlightDirection;
     [SerializeField] private int maxActiveAirplanes;
     [SerializeField] private float spawnCooldown;
     [SerializeField] private GameObject airplanePrefab;
-    [SerializeField] private ScriptableListAirplaneController activeAirplanes;
 
-    private float spawnTimer = 0;
+    private float nextSpawnTime = 0;
 
-    private void FixedUpdate()
+    public void TrySpawn()
     {
-        if (spawnTimer >= spawnCooldown && activeAirplanes.Where(x => x.Team == team).ToArray().Length < maxActiveAirplanes)
-        {
-            Spawn();
-            spawnTimer = 0;
-        }
-        else
-        {
-            spawnTimer += Time.deltaTime;
-        }
+        if (nextSpawnTime > Time.time)
+            return;
+
+        ServerSpawn();
+        nextSpawnTime = Time.time + spawnCooldown;
     }
 
-    private void Spawn()
+    [ServerRpc]
+    private void ServerSpawn()
+    { 
+        GameObject airplaneObject = Instantiate(airplanePrefab, transform.position, Quaternion.LookRotation(initialFlightDirection));
+        ServerManager.Spawn(airplaneObject, player.Owner);
+        InitAirplane(airplaneObject.GetComponent<AirplaneController>());
+    }
+
+    [ObserversRpc]
+    private void InitAirplane(AirplaneController airplane)
     {
-        GameObject AirplaneObject = Instantiate(airplanePrefab, transform.position, Quaternion.LookRotation(initialFlightDirection));
-        AirplaneController airplaneController = AirplaneObject.GetComponent<AirplaneController>();
-        airplaneController.Init(team, initialFlightDirection);
-        activeAirplanes.Add(airplaneController);
+        airplane.Init(player, initialFlightDirection);
     }
 }

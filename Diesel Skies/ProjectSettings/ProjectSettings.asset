@@ -103,7 +103,7 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   allowFullscreenSwitch: 1
-  fullscreenMode: 1
+  fullscreenMode: 3
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -139,9 +139,8 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.0.2
+  bundleVersion: 0.1.0
   preloadedAssets:
-  - {fileID: -215724447066861137, guid: 39c114c07540cd14585e99d9c2ddcb5a, type: 2}
   - {fileID: 11400000, guid: 2d0a0cbf3e909fa4bad0b9c03899f212, type: 2}
   - {fileID: 11400000, guid: f26f4534000397445b5a82758b1d572b, type: 2}
   metroInputSource: 0
@@ -263,8 +262,8 @@ PlayerSettings:
   useCustomGradlePropertiesTemplate: 0
   useCustomGradleSettingsTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
-  AndroidTargetDevices: 0
+  AndroidTargetArchitectures: 3
+  AndroidTargetDevices: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
@@ -739,11 +738,12 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: EDGEGAP_PLUGIN_SERVERS;FISHNET;FISHNET_V4
+    Android: EDGEGAP_PLUGIN_SERVERS;FISHNET;FISHNET_V4;FISHNET_DISABLE_V3TOV4_HELPERS
     Standalone: EDGEGAP_PLUGIN_SERVERS;FISHNET;FISHNET_V4
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   managedStrippingLevel:

@@ -1,10 +1,16 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PlayerInput : MonoBehaviour
 {
-    [field: SerializeField] public TeamVariable Team { get; private set; }
-    [SerializeField] private ScriptableListAirplaneController activeAirplanes;
+    [SerializeField] private PlayerController Player;
+
+    public void DetectInput()
+    {
+        if (Input.GetMouseButtonDown(0)) // Left mouse button or single touch
+        {
+            SetNearestAirplaneTarget(Input.mousePosition);
+        }
+    }
 
     public void SetNearestAirplaneTarget(Vector3 targetScreenPoint)
     {
@@ -12,9 +18,9 @@ public class PlayerInput : MonoBehaviour
         inputWorldPos.y = 0;
 
         AirplaneController nearestAirplane = null;
-        foreach (AirplaneController airplane in activeAirplanes)
+        foreach (AirplaneController airplane in FindObjectsByType<AirplaneController>(FindObjectsSortMode.None))
         {
-            if (airplane.Team != Team) continue;
+            if (airplane.Player != Player) continue;
             nearestAirplane = nearestAirplane != null ? nearestAirplane : airplane;
             
             if (Vector3.Distance(airplane.transform.position, inputWorldPos) < Vector3.Distance(nearestAirplane.transform.position, inputWorldPos))
@@ -26,6 +32,4 @@ public class PlayerInput : MonoBehaviour
         if (!nearestAirplane) return;
         nearestAirplane.SetTarget(inputWorldPos);
     }
-
-    
 }

@@ -12,7 +12,7 @@ public class Sensor : MonoBehaviour
 
 
     private readonly List<GameObject> detectedGameObjects = new();
-    private TeamVariable team;
+    private PlayerController player;
     private bool isInitialized = false;
 
     private void OnTriggerEnter(Collider other) 
@@ -21,8 +21,8 @@ public class Sensor : MonoBehaviour
 
         if((detectFriendlyAirplanes || detectEnemyAirplanes) && TryDetect(other, out AirplaneController airplane))
         {
-            if (detectFriendlyAirplanes && airplane.Team == team) detectedGameObjects.Add(other.gameObject);
-            if (detectEnemyAirplanes && airplane.Team != team) detectedGameObjects.Add(other.gameObject);
+            if (detectFriendlyAirplanes && airplane.Player == player) detectedGameObjects.Add(other.gameObject);
+            if (detectEnemyAirplanes && airplane.Player != player) detectedGameObjects.Add(other.gameObject);
         }
 
         if(detectProjectiles && TryDetect(other, out Projectile _))
@@ -53,10 +53,10 @@ public class Sensor : MonoBehaviour
         }
     }
 
-    public void Init(TeamVariable team)
+    public void Init(PlayerController player)
     {
         if(isInitialized) throw new Exception("Init may only be called once.");
-        this.team = team;
+        this.player = player;
 
         isInitialized = true;
     }
